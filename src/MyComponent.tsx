@@ -1,9 +1,12 @@
 import "./MyComponent.scss";
 
-export function MyComponent() {
+
+export function MyComponent({title}: {
+	title: string
+}) {
 	return (
 		<div className="myComponent">
-			<h1>My Component</h1>
+			<h1>{title}</h1>
 		</div>
 	);
 }

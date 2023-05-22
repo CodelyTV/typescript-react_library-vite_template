@@ -9,16 +9,16 @@
 </h1>
 
 <p align="center">
-    <a href="https://github.com/CodelyTV/vite-react_best_practices-template/actions/workflows/tests.yml"><img src="https://github.com/CodelyTV/vite-react_best_practices-template/actions/workflows/tests.yml/badge.svg" alt="Build status"/></a>
+    <a href="https://github.com/CodelyTV/ typescript-react-library-template/actions/workflows/tests.yml"><img src="https://github.com/CodelyTV/ typescript-react-library-template/actions/workflows/tests.yml/badge.svg" alt="Build status"/></a>
     <a href="https://github.com/CodelyTV"><img src="https://img.shields.io/badge/CodelyTV-OS-green.svg?style=flat-square" alt="Codely Open Source"/></a>
     <a href="https://pro.codely.com"><img src="https://img.shields.io/badge/CodelyTV-PRO-black.svg?style=flat-square" alt="Codely Pro Courses"/></a>
 </p>
 
 <p align="center">
-  Template for creating React libraries with TypeScript following best practices: Unit tests, Continuous Integration, and linting.
+  Template for creating React libraries with TypeScript following best practices: Storybook for documentation, Unit tests, Continuous Integration, and linting.
   <br />
   <br />
-  <a href="https://github.com/CodelyTV/vite-react_best_practices-template/stargazers">Stars are welcome 😊</a>
+  <a href="https://github.com/CodelyTV/ typescript-react-library-template/stargazers">Stars are welcome 😊</a>
 </p>
 
 ## ⚡ Using this Vite template
@@ -27,20 +27,44 @@
    - a) If you want to create a GitHub repository, we would recommend to use the GitHub "Use this template" button and clone your newly created repository
    - b) If you prefer to just create a local project, you can use [degit](https://github.com/Rich-Harris/degit):
      ```bash
-     npx degit CodelyTV/vite-react_best_practices-template#main my-app
+     npx degit CodelyTV/ typescript-react-library-template#main my-app
      ```
 2. Update your project meta-information:
-   - [ ] Update the [`package.json`](https://github.com/CodelyTV/vite-react_best_practices-template/blob/main/package.json):
+   - [ ] Update the [`package.json`](https://github.com/CodelyTV/typescript-react-library-template/blob/main/package.json):
      - [ ] Specify proper values for the `name`, `author` and `license` properties
-     - [ ] Remove the `private` property if you plan to publish the app as a npm package
-   - [ ] Change the author in [`LICENSE`](https://github.com/CodelyTV/vite-react_best_practices-template/blob/main/LICENSE)
-   - [ ] Change the title in [`index.html`](https://github.com/CodelyTV/vite-react_best_practices-template/blob/main/index.html)
-   - [ ] Replace the favicon in the [`public`](https://github.com/CodelyTV/vite-react_best_practices-template/blob/main/public) directory
-   - [ ] Clean up this [`README.md`](https://github.com/CodelyTV/vite-react_best_practices-template/blob/main/README.md)
+     - [ ] Specify the file name for the `main` and `module` properties
+     - [ ] If you wish to expose multiple entry points, follow this structure:
+     ```
+      {
+        "name": "my-component",
+        "type": "module",
+        "files": ["dist"],
+        "main": "./dist/my-component.cjs",
+        "module": "./dist/my-component.js",
+        "exports": {
+          ".": {
+            "import": "./dist/my-component.js",
+            "require": "./dist/my-component.cjs"
+          },
+          "./secondary": {
+            "import": "./dist/secondary.js",
+            "require": "./dist/secondary.cjs"
+          }
+        }
+      }
+      ```
+   - [ ] Change the name and fileName in [`vite.config.ts`](https://github.com/CodelyTV/typescript-react-library-template/blob/main/vite.config.ts) to match the file name specified in the `package.json`
+   - [ ] Change the author in [`LICENSE`](https://github.com/CodelyTV/typescript-react-library-template/blob/main/LICENSE)
+   - [ ] Clean up this [`README.md`](https://github.com/CodelyTV/typescript-react-library-template/blob/main/README.md)
 3. Run your app:
    1. `cd my-app`: Move to your project root directory
    2. `npm install`: Install all the project dependencies
    3. `npm start`: Start the development server on [localhost:3000](http://localhost:3000)
+
+## 📚 Documentation
+
+- `npm run docs`: Run Storybook documentation in dev mode
+- `npm run build:docs`: Build Storybook documentation
 
 ## ✅ Testing
 
@@ -56,10 +80,11 @@
 ## 🌈 Tech Stack
 
 - [TypeScript](https://www.typescriptlang.org)
+- [Storybook](https://storybook.js.org/)
 - [ESLint](https://eslint.org) and [Prettier](https://prettier.io) already configured with the [🤏 Codely's configuration](https://github.com/CodelyTV/eslint-config-codely)
 - [Jest](https://jestjs.io) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) for the unit tests
 - [GitHub Action Workflows](https://github.com/features/actions) set up to run tests and linting on push
-- [Makefile](https://github.com/CodelyTV/vite-react_best_practices-template/blob/main/Makefile) for standardize how to run projects
+- [Makefile](https://github.com/CodelyTV/ typescript-react-library-template/blob/main/Makefile) for standardize how to run projects
 - [Sass](https://sass-lang.com) to supercharge CSS with nested classes and more fun
 - [.editorconfig](https://editorconfig.org) for sharing the IDE config
 
@@ -97,4 +122,4 @@ Publishing this package we are committing ourselves to the following code qualit
 
 ## 🔀 Related information
 
-This application was generated using the [<⚡⚛️> Vite React Best Practices Template](https://github.com/CodelyTV/vite-react_best_practices-template). Feel free to check it out and star the repo! 🌟😊🙌
+This application was generated using the [<⚡⚛️> Vite React Best Practices Template](https://github.com/CodelyTV/ typescript-react-library-template). Feel free to check it out and star the repo! 🌟😊🙌
