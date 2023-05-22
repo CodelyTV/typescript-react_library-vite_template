@@ -3,20 +3,23 @@
   "author": "codelytv",
   "license": "MIT",
   "private": true,
-  "version": "1.0.0",
-  "dependencies": {
+  "version": "1.0.3",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/my-component.umd.cjs",
+  "module": "./dist/my-component.js",
+  "types": "./dist/index.d.ts",
+  "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "scripts": {
-    "start": "vite --port 3000 --open",
     "build": "vite build",
-    "test": "jest --watch --config=jest.config.js",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
+    "test": "jest --watch --config=jest.config.cjs",
     "lint": "eslint --ignore-path .gitignore . && stylelint **/*.scss",
-    "lint:fix": "eslint --fix --ignore-path .gitignore . && stylelint --fix **/*.scss",
-    "preview": "vite preview"
+    "lint:fix": "eslint --fix --ignore-path .gitignore . && stylelint --fix **/*.scss"
   },
   "eslintConfig": {
     "extends": [
@@ -24,11 +27,6 @@
       "react-app/jest",
       "eslint-config-codely/typescript"
     ],
-    "parserOptions": {
-      "project": [
-        "./tsconfig.json"
-      ]
-    },
     "settings": {
       "import/resolver": {
         "node": {
@@ -44,13 +42,12 @@
     "overrides": [
       {
         "files": [
-          "**/tests/e2e/**/*.spec.ts"
+          "*.ts", "*.tsx"
         ],
-        "rules": {
-          "testing-library/await-async-query": 0,
-          "@typescript-eslint/no-unsafe-member-access": 0,
-          "@typescript-eslint/no-unsafe-call": 0,
-          "testing-library/prefer-screen-queries": 0
+        "parserOptions": {
+          "project": [
+            "./tsconfig.json"
+          ]
         }
       }
     ]
@@ -70,7 +67,6 @@
   "devDependencies": {
     "@swc/core": "^1.3.42",
     "@swc/jest": "^0.2.24",
-    "@testing-library/cypress": "^8.0.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -79,7 +75,6 @@
     "@types/react": "^18.0.30",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^3.1.0",
-    "cypress": "^10.3.0",
     "eslint": "^8.36.0",
     "eslint-config-codely": "^2.1.3",
     "eslint-config-react-app": "^7.0.1",
@@ -93,6 +88,8 @@
     "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-order": "^5.0.0",
     "typescript": "^4.9.5",
-    "vite": "^4.2.1"
+    "vite": "^4.3.8",
+    "vite-plugin-dts": "^2.3.0",
+    "vite-plugin-css-injected-by-js": "^3.1.1"
   }
 }

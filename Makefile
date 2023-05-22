@@ -9,10 +9,6 @@ deps:
 compile:
 	npm run build
 
-.PHONY: start
-start:
-	npm start
-
 .PHONY: test
 test:
 	npm test
