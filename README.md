@@ -86,6 +86,22 @@ This template comes with both Jest and Cypress component testing. Since this is 
 - `npm run lint`: Run linter
 - `npm run lint:fix`: Fix lint issues
 
+## 🚀 Publishing
+
+This template comes with a GitHub Actions workflow to automatically publish on any push to `main` when the `package.json` version number differs from the latest on npm. Please note that you need to create the package on NPM first.
+
+For it to work you will need to add an `NPM_TOKEN` secret to your repo:
+
+1. Create an automation token in NPM
+  - [Documentation on npm tokens](https://docs.npmjs.com/about-access-tokens) and how to create them
+2. Go to your GitHub Repository Settings / Secrets / Actions
+3. Click on the "New repository secret" button
+4. Fill in the form:
+  - Name: `NPM_TOKEN`
+  - Secret: the NPM token value
+
+Read the [full documentation on the npm-publish action](https://github.com/JS-DevTools/npm-publish).
+
 ## 🌈 Tech Stack
 
 - [TypeScript](https://www.typescriptlang.org)
