@@ -53,7 +53,7 @@
         }
       }
       ```
-   - [ ] Change the name and fileName in [`vite.config.ts`](https://github.com/CodelyTV/typescript-react-library-template/blob/main/vite.config.ts) to match the file name specified in the `package.json`
+   - [ ] Change the `name` and `fileName` in [`vite.config.ts`](https://github.com/CodelyTV/typescript-react-library-template/blob/main/vite.config.ts) to match the file name specified in the `package.json`
    - [ ] Change the author in [`LICENSE`](https://github.com/CodelyTV/typescript-react-library-template/blob/main/LICENSE)
    - [ ] Clean up this [`README.md`](https://github.com/CodelyTV/typescript-react-library-template/blob/main/README.md)
 3. Run your library:
@@ -94,12 +94,12 @@ This template comes with a GitHub Actions workflow to automatically publish on a
 For it to work you will need to add an `NPM_TOKEN` secret to your repo:
 
 1. Create an automation token in NPM
-  - [Documentation on npm tokens](https://docs.npmjs.com/about-access-tokens) and how to create them
+   - [Documentation on npm tokens](https://docs.npmjs.com/about-access-tokens) and how to create them
 2. Go to your GitHub Repository Settings / Secrets / Actions
 3. Click on the "New repository secret" button
 4. Fill in the form:
-  - Name: `NPM_TOKEN`
-  - Secret: the NPM token value
+   - Name: `NPM_TOKEN`
+   - Secret: the NPM token value
 
 Read the [full documentation on the npm-publish action](https://github.com/JS-DevTools/npm-publish).
 
