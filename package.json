@@ -16,7 +16,8 @@
   },
   "scripts": {
     "build": "vite build",
-    "test": "jest --watch --config=jest.config.cjs",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "eslint --ignore-path .gitignore . && stylelint **/*.scss",
     "lint:fix": "eslint --fix --ignore-path .gitignore . && stylelint --fix **/*.scss",
     "docs": "storybook dev -p 6006",

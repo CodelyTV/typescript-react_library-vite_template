@@ -73,6 +73,7 @@ This template comes with both Jest and Cypress component testing. Since this is 
 ### Unit tests
 
 `npm run test`: Run unit tests with Jest and React Testing Library
+`npm run test:watch`: Run unit tests on watch mode
 
 ### Component tests
 
