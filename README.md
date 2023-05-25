@@ -9,7 +9,7 @@
 </h1>
 
 <p align="center">
-    <a href="https://github.com/CodelyTV/ typescript-react-library-template/actions/workflows/tests.yml"><img src="https://github.com/CodelyTV/ typescript-react-library-template/actions/workflows/tests.yml/badge.svg" alt="Build status"/></a>
+    <a href="https://github.com/CodelyTV/typescript-react_library-vite_template/actions/workflows/tests.yml"><img src="https://github.com/CodelyTV/typescript-react_library-vite_template/actions/workflows/tests.yml/badge.svg" alt="Build status"/></a>
     <a href="https://github.com/CodelyTV"><img src="https://img.shields.io/badge/CodelyTV-OS-green.svg?style=flat-square" alt="Codely Open Source"/></a>
     <a href="https://pro.codely.com"><img src="https://img.shields.io/badge/CodelyTV-PRO-black.svg?style=flat-square" alt="Codely Pro Courses"/></a>
 </p>
@@ -18,7 +18,7 @@
   Template for creating React libraries with TypeScript following best practices: Storybook for documentation, testing, Continuous Integration, and linting.
   <br />
   <br />
-  <a href="https://github.com/CodelyTV/ typescript-react-library-template/stargazers">Stars are welcome 😊</a>
+  <a href="https://github.com/CodelyTV/typescript-react_library-vite_template/stargazers">Stars are welcome 😊</a>
 </p>
 
 ## ⚡ Using this Vite template
@@ -27,10 +27,10 @@
    - a) If you want to create a GitHub repository, we would recommend to use the GitHub "Use this template" button and clone your newly created repository
    - b) If you prefer to just create a local project, you can use [degit](https://github.com/Rich-Harris/degit):
      ```bash
-     npx degit CodelyTV/ typescript-react-library-template#main my-app
+     npx degit CodelyTV/typescript-react_library-vite_template#main my-app
      ```
 2. Update your project meta-information:
-   - [ ] Update the [`package.json`](https://github.com/CodelyTV/typescript-react-library-template/blob/main/package.json):
+   - [ ] Update the [`package.json`](https://github.com/CodelyTV/typescript-react_library-vite_template/blob/main/package.json):
      - [ ] Specify proper values for the `name`, `author` and `license` properties
      - [ ] Specify the file name for the `main` and `module` properties
      - [ ] If you wish to expose multiple entry points, follow this structure:
@@ -53,10 +53,13 @@
         }
       }
       ```
-   - [ ] Change the `name` and `fileName` in [`vite.config.ts`](https://github.com/CodelyTV/typescript-react-library-template/blob/main/vite.config.ts) to match the file name specified in the `package.json`
-   - [ ] Change the author in [`LICENSE`](https://github.com/CodelyTV/typescript-react-library-template/blob/main/LICENSE)
-   - [ ] Clean up this [`README.md`](https://github.com/CodelyTV/typescript-react-library-template/blob/main/README.md)
-3. Run your library:
+   - [ ] Change the `name` and `fileName` in [`vite.config.ts`](https://github.com/CodelyTV/typescript-react_library-vite_template/blob/main/vite.config.ts) to match the file name specified in the `package.json`
+   - [ ] Change the author in [`LICENSE`](https://github.com/CodelyTV/typescript-react_library-vite_template/blob/main/LICENSE)
+   - [ ] Clean up this [`README.md`](https://github.com/CodelyTV/typescript-react_library-vite_template/blob/main/README.md)
+3. Set up your GitHub Actions workflow:
+   - [ ] If you do **not** wish to publish to npm, you can delete the `.github/workflows/publish.yml`
+   - [ ] If you do wish to publish to npm, you can delete the `.github/workflows/CI.yml` and set up your token following [the instructions below](#🚀-ci-and-publishing).
+4. Run your library:
    1. `cd my-library`: Move to your project root directory
    2. `npm install`: Install all the project dependencies
    3. `npm run docs`: Start the Storybook dev mode on [localhost:6006](http://localhost:6006)
@@ -87,7 +90,7 @@ This template comes with both Jest and Cypress component testing. Since this is 
 - `npm run lint`: Run linter
 - `npm run lint:fix`: Fix lint issues
 
-## 🚀 Publishing
+## 🚀 CI and Publishing
 
 This template comes with a GitHub Actions workflow to automatically publish on any push to `main` when the `package.json` version number differs from the latest on npm. Please note that you need to create the package on NPM first.
 
@@ -111,7 +114,7 @@ Read the [full documentation on the npm-publish action](https://github.com/JS-De
 - [Jest](https://jestjs.io) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) for the unit tests
 - [Cypress](https://www.cypress.io/) with [Testing Library](https://testing-library.com/docs/cypress-testing-library) for acceptance/component tests
 - [GitHub Action Workflows](https://github.com/features/actions) set up to run tests and linting on push
-- [Makefile](https://github.com/CodelyTV/ typescript-react-library-template/blob/main/Makefile) for standardize how to run projects
+- [Makefile](https://github.com/CodelyTV/typescript-react_library-vite_template/blob/main/Makefile) for standardize how to run projects
 - [Sass](https://sass-lang.com) to supercharge CSS with nested classes and more fun
 - [.editorconfig](https://editorconfig.org) for sharing the IDE config
 
@@ -141,4 +144,4 @@ Publishing this package we are committing ourselves to the following code qualit
 
 ## 🔀 Related information
 
-This application was generated using the [<⚡⚛️> TypeScript React Library Template](https://github.com/CodelyTV/typescript-react-library-template). Feel free to check it out and star the repo! 🌟😊🙌
+This application was generated using the [<⚡⚛️> TypeScript React Library Template](https://github.com/CodelyTV/typescript-react_library-vite_template). Feel free to check it out and star the repo! 🌟😊🙌
