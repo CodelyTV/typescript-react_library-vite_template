@@ -58,7 +58,7 @@
    - [ ] Clean up this [`README.md`](https://github.com/CodelyTV/typescript-react_library-vite_template/blob/main/README.md)
 3. Set up your GitHub Actions workflow:
    - [ ] If you do **not** wish to publish to npm, you can delete the `.github/workflows/publish.yml`
-   - [ ] If you do wish to publish to npm, you can delete the `.github/workflows/CI.yml` and set up your token following [the instructions below](#🚀-ci-and-publishing).
+   - [ ] If you do wish to publish to npm, you can delete the `.github/workflows/CI.yml` and set up your token following [the instructions below](#-ci-and-publishing).
 4. Run your library:
    1. `cd my-library`: Move to your project root directory
    2. `npm install`: Install all the project dependencies
