@@ -1,4 +1,4 @@
-import { MyComponent } from "../../src/MyComponent";
+import { MyComponent } from "../src/MyComponent";
 
 describe("<MyComponent />", () => {
 	it("renders", () => {

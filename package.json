@@ -58,12 +58,12 @@
       },
       {
         "files": [
-          "cypress/**/*.ts",
-          "cypress/**/*.tsx"
+          "tests/**/*.cy.tsx",
+          "tests/tests-config/cypress/**/*.ts"
         ],
         "parserOptions": {
           "project": [
-            "./cypress/tsconfig.json"
+            "./tests/tsconfig.json"
           ]
         }
       }

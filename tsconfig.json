@@ -22,7 +22,8 @@
   },
   "include": [
     "src",
-    "tests",
+    "tests/**/*.spec.tsx",
+    "tests/tests-config/jest/**/*.ts",
     "cypress.config.ts",
     "vite.config.ts"
   ]
